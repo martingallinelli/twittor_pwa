@@ -1,7 +1,19 @@
+//! si estoy en desarrollo o en produccion
+// url del SW en produccion
+var url = window.location.href;
+var swLocation = '/twittor_pwa/sw.js';
+
 //! si el SW existe en el navegador
 if ( navigator.serviceWorker ) {
-    // registrar el SW
-    navigator.serviceWorker.register('./sw.js')
+    //! si estoy en desarrollo
+    if ( url.includes('localhost') ) {
+        // registrar el SW
+        navigator.serviceWorker.register('./sw.js');
+    //! si estoy en produccion
+    } else {
+        // registrar el SW
+        navigator.serviceWorker.register(swLocation);
+    }
 }
 
 // Referencias de jQuery

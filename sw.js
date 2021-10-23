@@ -7,7 +7,7 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 // archivos necesiarios para el funcionamiento de la aplicación
 const APP_SHELL = [
-    '/',
+    //'/', no funciona en produccion
     'index.html',
     'css/style.css',
     'js/app.js',
