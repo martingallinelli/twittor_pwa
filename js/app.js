@@ -1,4 +1,4 @@
-/* //! si estoy en desarrollo o en produccion
+//! si estoy en desarrollo o en produccion
 // url del sitio 
 var url = window.location.href;
 // url del SW en produccion
@@ -12,10 +12,6 @@ if ( navigator.serviceWorker ) {
     }
 
     navigator.serviceWorker.register( swLocation );
-} */
-
-if ( navigator.serviceWorker ) {
-    navigator.serviceWorker.register( '/sw.js' );
 }
 
 // Referencias de jQuery
